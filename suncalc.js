@@ -188,7 +188,7 @@ SunCalc.getTimes = function (date, lat, lng, height) {
   // Convert dates to the time at lat/lng
   for (let time in result) {
     const options = {timeZone: tz, year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric'};
-    result[time] = new Date(Date.parse(new Intl.DateTimeFormat('default', options).format(result[time])));
+    result[time] = new Date(Date.parse(new Intl.DateTimeFormat('en', options).format(result[time])));
   }
 
   return result;
